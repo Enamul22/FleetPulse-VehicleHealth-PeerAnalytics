@@ -1,0 +1,34 @@
+{
+  "countries": 4,
+  "counts": {
+    "assets": 1000,
+    "component_month_health": 60000,
+    "observations": 365000,
+    "peer_membership": 108296,
+    "vehicle_month_health": 12000
+  },
+  "customers": 201,
+  "grain": "Daily operating-summary observations weighted by canonical operating hours times recorded fraction",
+  "interface_reference_revision": "5c3e9dc40a083495def3623f61c60985418a5653",
+  "models": 4,
+  "month_end": "2025-12-01",
+  "month_start": "2025-01-01",
+  "provenance": "Canonical identity and usage from pinned FleetCare Git blobs; all condition observations are the separate FleetPulse synthetic extension. No operational databases or service responses were read.",
+  "score_version": "fp-index-1",
+  "seed": 20261029,
+  "sha256": {
+    "assets.parquet": "d4ee5d0aa61823a799c7bcd004d3de76a45abe1c33cb5534b8dea7720fa2cfd6",
+    "baseline.json": "c8c66109f0590865f6150051fe2a5d124ac22414a90c98618efbed62ca850f3c",
+    "component_month_health.parquet": "35e814634d490c6bf0492bc1cfe5854023e0727bfbcce28aff90b23bab3a56ad",
+    "observations.parquet": "86f68797216091d8acb2024d3e3f0b784da725c2a0507c7e1040a42cde20b8f2",
+    "peer_membership.parquet": "0ce3b07856350ce4f869d74d79e706886cad02e3da0e6226925b4d86d43684d5",
+    "policy.json": "89bb9157761ef1e5b33cb27ecf33c42d52c1052fca9f6f1f785790c7c848910f",
+    "vehicle_month_health.parquet": "c864704fb892ca43020ccb954ee64a0aae2949556787921afef58efb1b03ea8b"
+  },
+  "simulator_version": "fp-daily-1",
+  "source_blob_sha256": {
+    "assets": "e632052b8e45fef4dadc6ba7ec2876ac5408b992626c8a293b8d421778517340",
+    "daily": "5741cd3ca7d34ec61093ba37b036cb0dda418d323d4d5a40ba07764b4c13b579"
+  },
+  "source_revision": "0f3663e31ea6610eb2a00256ca0d984ebc7c586b"
+}

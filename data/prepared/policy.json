@@ -1,0 +1,64 @@
+{
+  "bands": {
+    "0\u2013<75": "Larger observed deviation",
+    "75\u2013<90": "Some observed deviation",
+    "90\u2013100": "Small observed deviation"
+  },
+  "gates": {
+    "active_days": 5,
+    "coverage": 0.8,
+    "hours": 10.0
+  },
+  "mean_weight": 0.7,
+  "measurement_validity_bounds": {
+    "charging": [
+      8.0,
+      17.0
+    ],
+    "cooling": [
+      -20.0,
+      150.0
+    ],
+    "lubrication": [
+      0.0,
+      9.0
+    ],
+    "oil": [
+      -20.0,
+      180.0
+    ],
+    "smoothness": [
+      0.0,
+      12.0
+    ]
+  },
+  "peer": {
+    "age_caliper_years": 3.0,
+    "ambient_caliper_c": 5.0,
+    "hours_floor": 500.0,
+    "hours_relative_caliper": 0.5,
+    "limited_max": 4,
+    "minimum_other": 2,
+    "version": "fp-peer-1"
+  },
+  "percentile": "left inverse exposure-weighted empirical CDF: first sorted value with cumulative weight >= 95% total",
+  "score_version": "fp-index-1",
+  "severe_reference_provenance": "Fixed synthetic signal perturbation settings chosen in development before evaluation; not manufacturer thresholds",
+  "severe_references": {
+    "charging": 1.7,
+    "cooling": 20.0,
+    "lubrication": 1.8,
+    "oil": 28.0,
+    "smoothness": 3.0
+  },
+  "simulator_version": "fp-daily-1",
+  "tail_weight": 0.3,
+  "underperformance_gap": -5,
+  "weights": {
+    "charging": 0.2,
+    "cooling": 0.2,
+    "lubrication": 0.2,
+    "oil": 0.2,
+    "smoothness": 0.2
+  }
+}

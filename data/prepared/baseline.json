@@ -1,0 +1,135 @@
+{
+  "bounds": {
+    "ambient_c": [
+      -30.0,
+      45.0
+    ],
+    "load": [
+      0.1,
+      0.95
+    ],
+    "rpm": [
+      700.0,
+      4200.0
+    ]
+  },
+  "development_rows": 9000,
+  "development_seed": 4102,
+  "features": [
+    "constant",
+    "model_BIR",
+    "model_CED",
+    "model_ELM",
+    "ambient_20",
+    "load",
+    "rpm_1000",
+    "rpm_load",
+    "ambient_load"
+  ],
+  "method": "Ridge(alpha=0.000001, fit_intercept=False, solver=svd)",
+  "signals": {
+    "charging": {
+      "coefficients": [
+        14.30031722408987,
+        0.020436256372217264,
+        0.04159213595723063,
+        0.060221470109305834,
+        -0.1395391860327352,
+        -0.12049877852984757,
+        1.6890263013067013e-05,
+        -0.0002104555757643209,
+        -0.0001625796928421496
+      ],
+      "development_mae": 0.048525675154505864,
+      "development_max_context_bias": 0.010118734810454442,
+      "direction": -1,
+      "healthy_tolerance": 0.1822710453617459,
+      "severe_reference": 1.7,
+      "tolerance_method": "median(signed adverse residual) + 3 * 1.4826 * MAD, with unit-specific floor",
+      "unit": "V"
+    },
+    "cooling": {
+      "coefficients": [
+        77.96520109881953,
+        0.35625808146337934,
+        0.6275656652060266,
+        0.9284661559753601,
+        3.604912019740712,
+        5.066998510056222,
+        2.000071301121,
+        -0.023971859719561117,
+        -0.013519811940294066
+      ],
+      "development_mae": 0.6408377972074008,
+      "development_max_context_bias": 0.11145592463482008,
+      "direction": 1,
+      "healthy_tolerance": 2.4455385966450573,
+      "severe_reference": 20.0,
+      "tolerance_method": "median(signed adverse residual) + 3 * 1.4826 * MAD, with unit-specific floor",
+      "unit": "\u00b0C"
+    },
+    "lubrication": {
+      "coefficients": [
+        1.199890523497926,
+        0.06958244368302625,
+        0.13924224355265277,
+        0.20923631446709115,
+        -0.03914627768118501,
+        0.5009896239023157,
+        0.5487976766507783,
+        0.0014147406069433396,
+        -0.0012209849987789073
+      ],
+      "development_mae": 0.06457894390628019,
+      "development_max_context_bias": 0.015129325923251488,
+      "direction": -1,
+      "healthy_tolerance": 0.23950349851045571,
+      "severe_reference": 1.8,
+      "tolerance_method": "median(signed adverse residual) + 3 * 1.4826 * MAD, with unit-specific floor",
+      "unit": "bar"
+    },
+    "oil": {
+      "coefficients": [
+        71.91653973918831,
+        0.5218665039722112,
+        1.0052030214846859,
+        1.5619732271812061,
+        6.021966639459877,
+        10.133019139344205,
+        3.0181140918467895,
+        -0.029204023564961667,
+        0.755921303253883
+      ],
+      "development_mae": 0.8991793434790579,
+      "development_max_context_bias": 0.2442279885853071,
+      "direction": 1,
+      "healthy_tolerance": 3.342894303803789,
+      "severe_reference": 28.0,
+      "tolerance_method": "median(signed adverse residual) + 3 * 1.4826 * MAD, with unit-specific floor",
+      "unit": "\u00b0C"
+    },
+    "smoothness": {
+      "coefficients": [
+        0.7031561309855642,
+        0.03842603935184917,
+        0.07554209952705845,
+        0.1211844394949818,
+        -0.00448937322386336,
+        0.5961249632670967,
+        0.2511929181974582,
+        0.19819834721437368,
+        0.007553357038277264
+      ],
+      "development_mae": 0.08893675742999883,
+      "development_max_context_bias": 0.01884594362165187,
+      "direction": 1,
+      "healthy_tolerance": 0.3372859940977409,
+      "severe_reference": 3.0,
+      "tolerance_method": "median(signed adverse residual) + 3 * 1.4826 * MAD, with unit-specific floor",
+      "unit": "mm/s RMS"
+    }
+  },
+  "training_rows": 18000,
+  "training_seed": 4101,
+  "version": "fp-index-1"
+}

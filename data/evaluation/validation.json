@@ -1,0 +1,305 @@
+{
+  "controlled_deterioration": {
+    "charging": {
+      "component_scores": [
+        100.0,
+        83.95550055398611,
+        55.953135658648364,
+        27.950770763310516,
+        0.0012210039847637688
+      ],
+      "loss_levels": [
+        0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ]
+    },
+    "cooling": {
+      "component_scores": [
+        100.0,
+        85.54341926324291,
+        57.060631411691865,
+        28.577843560140813,
+        0.10615029134624088
+      ],
+      "loss_levels": [
+        0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ]
+    },
+    "lubrication": {
+      "component_scores": [
+        100.0,
+        86.55571860418348,
+        57.71874270770052,
+        28.881766811217513,
+        0.049948439834124336
+      ],
+      "loss_levels": [
+        0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ]
+    },
+    "oil": {
+      "component_scores": [
+        100.0,
+        85.20022546714318,
+        56.81084316798765,
+        28.421460868832106,
+        0.03719199377469895
+      ],
+      "loss_levels": [
+        0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ]
+    },
+    "smoothness": {
+      "component_scores": [
+        100.0,
+        84.46145518144576,
+        56.29470507844838,
+        28.127954975450997,
+        0.01689108982778631
+      ],
+      "loss_levels": [
+        0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ]
+    }
+  },
+  "evaluation_seed": 9101,
+  "evaluation_vehicles": "HEALTHY-HOLDOUT and EVAL-CONTROL; independent of training/development and displayed fleet",
+  "examples": {
+    "declining": "VEH-0852",
+    "healthy": "VEH-0383",
+    "limited": "VEH-0001",
+    "missing": "VEH-0015",
+    "no_peers": "VEH-0331",
+    "one_peer": "VEH-0002",
+    "rebounded": "VEH-0457"
+  },
+  "interpretation": "Synthetic index checks, not real-world diagnostic accuracy. Tail-aware settings remain the approved 70/30 policy; evaluation results did not refit or tune them.",
+  "max_reconstruction_error": {
+    "monthly_change": 2.042810365310288e-14,
+    "own": 1.7763568394002505e-14,
+    "peer_gap": 4.796163466380676e-14
+  },
+  "month_availability": [
+    {
+      "assets": 1000,
+      "limited_2_to_4": 142,
+      "month": "2025-01",
+      "own_score": 893,
+      "peer_comparison": 838,
+      "unknown": 107,
+      "valid_own_no_peers": 13,
+      "valid_own_one_peer": 42
+    },
+    {
+      "assets": 1000,
+      "limited_2_to_4": 139,
+      "month": "2025-02",
+      "own_score": 903,
+      "peer_comparison": 850,
+      "unknown": 97,
+      "valid_own_no_peers": 17,
+      "valid_own_one_peer": 36
+    },
+    {
+      "assets": 1000,
+      "limited_2_to_4": 135,
+      "month": "2025-03",
+      "own_score": 896,
+      "peer_comparison": 849,
+      "unknown": 104,
+      "valid_own_no_peers": 13,
+      "valid_own_one_peer": 34
+    },
+    {
+      "assets": 1000,
+      "limited_2_to_4": 144,
+      "month": "2025-04",
+      "own_score": 903,
+      "peer_comparison": 853,
+      "unknown": 97,
+      "valid_own_no_peers": 12,
+      "valid_own_one_peer": 38
+    },
+    {
+      "assets": 1000,
+      "limited_2_to_4": 141,
+      "month": "2025-05",
+      "own_score": 908,
+      "peer_comparison": 871,
+      "unknown": 92,
+      "valid_own_no_peers": 6,
+      "valid_own_one_peer": 31
+    },
+    {
+      "assets": 1000,
+      "limited_2_to_4": 142,
+      "month": "2025-06",
+      "own_score": 910,
+      "peer_comparison": 874,
+      "unknown": 90,
+      "valid_own_no_peers": 11,
+      "valid_own_one_peer": 25
+    },
+    {
+      "assets": 1000,
+      "limited_2_to_4": 129,
+      "month": "2025-07",
+      "own_score": 905,
+      "peer_comparison": 865,
+      "unknown": 95,
+      "valid_own_no_peers": 12,
+      "valid_own_one_peer": 28
+    },
+    {
+      "assets": 1000,
+      "limited_2_to_4": 135,
+      "month": "2025-08",
+      "own_score": 903,
+      "peer_comparison": 873,
+      "unknown": 97,
+      "valid_own_no_peers": 10,
+      "valid_own_one_peer": 20
+    },
+    {
+      "assets": 1000,
+      "limited_2_to_4": 132,
+      "month": "2025-09",
+      "own_score": 914,
+      "peer_comparison": 887,
+      "unknown": 86,
+      "valid_own_no_peers": 5,
+      "valid_own_one_peer": 22
+    },
+    {
+      "assets": 1000,
+      "limited_2_to_4": 113,
+      "month": "2025-10",
+      "own_score": 894,
+      "peer_comparison": 861,
+      "unknown": 106,
+      "valid_own_no_peers": 7,
+      "valid_own_one_peer": 26
+    },
+    {
+      "assets": 1000,
+      "limited_2_to_4": 114,
+      "month": "2025-11",
+      "own_score": 898,
+      "peer_comparison": 858,
+      "unknown": 102,
+      "valid_own_no_peers": 5,
+      "valid_own_one_peer": 35
+    },
+    {
+      "assets": 1000,
+      "limited_2_to_4": 121,
+      "month": "2025-12",
+      "own_score": 907,
+      "peer_comparison": 874,
+      "unknown": 93,
+      "valid_own_no_peers": 7,
+      "valid_own_one_peer": 26
+    }
+  ],
+  "noise_sensitivity": {
+    "mean_only_health_mean": 99.99852469014999,
+    "mean_only_health_std": 0.00408912631847036,
+    "single_day_oil_spike_overall_deduction": 0.4513557093615077,
+    "tail_aware_health_mean": 99.998967283105,
+    "tail_aware_health_std": 0.002862388422927558,
+    "two_day_oil_burst_overall_deduction": 6.8993064412206735
+  },
+  "reference_errors": {
+    "charging": {
+      "expected_reference_mae": 0.0006866756930259447,
+      "healthy_tolerance": 0.1822710453617459,
+      "max_context_mean_error": 0.0024913374475337077,
+      "measurement_residual_mae": 0.04839625549035172,
+      "unit": "V"
+    },
+    "cooling": {
+      "expected_reference_mae": 0.02012555822994292,
+      "healthy_tolerance": 2.4455385966450573,
+      "max_context_mean_error": 0.03970712742164439,
+      "measurement_residual_mae": 0.6460151210456492,
+      "unit": "\u00b0C"
+    },
+    "lubrication": {
+      "expected_reference_mae": 0.0012719187205192852,
+      "healthy_tolerance": 0.23950349851045571,
+      "max_context_mean_error": 0.0032508855572207407,
+      "measurement_residual_mae": 0.06433118613308528,
+      "unit": "bar"
+    },
+    "oil": {
+      "expected_reference_mae": 0.027002520918380502,
+      "healthy_tolerance": 3.342894303803789,
+      "max_context_mean_error": 0.08716595393824539,
+      "measurement_residual_mae": 0.8867993076883686,
+      "unit": "\u00b0C"
+    },
+    "smoothness": {
+      "expected_reference_mae": 0.002605900349054073,
+      "healthy_tolerance": 0.3372859940977409,
+      "max_context_mean_error": 0.00784690800914173,
+      "measurement_residual_mae": 0.09029190363780909,
+      "unit": "mm/s RMS"
+    }
+  },
+  "score_summary": {
+    "25%": 86.91548702423663,
+    "50%": 92.92930805947051,
+    "75%": 96.47855084705145,
+    "count": 10834.0,
+    "max": 100.0,
+    "mean": 90.5606408225692,
+    "min": 39.74179414062746,
+    "std": 8.08501895675864
+  },
+  "supported_recovery": {
+    "charging": {
+      "after": 100.0,
+      "before": 87.83034334428913,
+      "improvement": 12.169656655710867
+    },
+    "cooling": {
+      "after": 100.0,
+      "before": 87.99419174015225,
+      "improvement": 12.005808259847754
+    },
+    "lubrication": {
+      "after": 100.0,
+      "before": 88.08331143396214,
+      "improvement": 11.916688566037863
+    },
+    "oil": {
+      "after": 100.0,
+      "before": 87.95544275769886,
+      "improvement": 12.044557242301138
+    },
+    "smoothness": {
+      "after": 100.0,
+      "before": 87.87893100333,
+      "improvement": 12.121068996670004
+    }
+  }
+}
