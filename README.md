@@ -2,8 +2,6 @@
 
 A read-only fleet review application by **Enamul Haque**. Select a month, inspect one of 1,000 fictional vehicles, and understand its condition index, recent trend and matched-peer comparison. Explanations trace back to five observable signal indicators and exact score contributions.
 
-**No login, database, secrets, paid API or online inference is required.** FleetCare and ServicePlan remain independent and unchanged. FleetPulse version **1.0.0**.
-
 ![Fleet overview](docs/screenshots/overview.jpg)
 
 ## Use the application
@@ -84,9 +82,5 @@ PYTHONPATH=src OPENBLAS_NUM_THREADS=1 python -m fleetpulse.prepare \
 ```
 
 Source/output SHA256s, seeds, policies and frozen coefficients are committed. Later score recalculation requires a new labelled score/reference revision, not silently replacing past values. [Reproducibility](docs/reproducibility.md).
-
-## Manual Streamlit deployment
-
-Hosting is intentionally **not deployed** by this task. After review, create a new app using **Enamul22/FleetPulse-VehicleHealth-PeerAnalytics**, branch **main**, entry point **app.py**, Python **3.12**. **Leave Secrets empty.** Do not copy either other project’s database settings. The prepared data and locked requirements are sufficient.
 
 [Dataset/simulator card](docs/dataset-card.md) · [Data dictionary](docs/data-dictionary.md) · [Architecture](docs/architecture.md) · [Decisions/check log](docs/progress.md)
