@@ -11,3 +11,5 @@
 
 - Completed 35 tests with no skips, full offline validation and desktop native-table walkthroughs: limited, missing-data, zero-peer, small-deviation, declining and rebound/one-peer cases. Inspected 390×844 stacking through native Chrome DevTools after direct responsive control failed; restored desktop afterward. Screenshots and measured evidence are indexed in docs.
 - Clarified unit labels to avoid truncated asset counters and kept unavailable peer contributors explicitly unavailable. No scoring parameters were retuned from final evaluation results.
+
+- GitHub application commit e59b7e1 passed remote CI: 35 tests in 7.81 s, locked installation, dependency consistency, lint/format and offline validation. Fresh independent Python 3.12.14 clone passed all 35 tests and real Streamlit startup health/HTTP checks, without private files or reference checkouts. Final handoff records those measured results; hosting remains a manual step with no Secrets.
