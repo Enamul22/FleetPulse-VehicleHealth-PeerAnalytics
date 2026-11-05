@@ -4,7 +4,7 @@
 
 FleetCare main revision `0f3663e31ea6610eb2a00256ca0d984ebc7c586b`, read-only `git show` of `data/demo/assets.parquet` and `daily.parquet`. Source blob SHA256s are in `manifest.json`. Preserve vehicle/CRM/customer/model/location IDs, source age/initial counters, usage profiles and every 2025 daily operating hour, distance, odometer and lifetime-hour value. Exactly 1,000 assets, 201 customer IDs, four models/countries, 365 days each. Names combine the existing fictional model with vehicle ID; Compact/Sedan/Van/Utility types are a documented derived model taxonomy, not new source measurements.
 
-ServicePlan interface reference: current main `5c3e9dc40a083495def3623f61c60985418a5653`, inspected via connected GitHub read-only. Table/detail/back and restrained teal presentation were adapted. No operational code, users, sessions, work orders, responses, secrets or database was imported from either app. Their files/data/deployments remain unchanged.
+The overview/detail navigation and restrained teal presentation follow the ServicePlan interface pattern.
 
 Original monthly files describe usage/counters, not a complete coherent twelve-month component history. Earlier condition approximations and their shared seasonal weather are deliberately not scored as equivalent observations.
 

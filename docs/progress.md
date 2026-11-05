@@ -1,15 +1,23 @@
-# Progress and decisions
+# Engineering decisions and verification history
 
-2026-10-29 (Europe/Helsinki)
+## Baseline and synthetic data
 
-- Read the master prompt and approved planning notes. Verified Enamul22 account ID 135505234 and SSH identity; the target repository was absent. Reference working trees were clean and remain separate.
-- Canonical FleetCare source pinned at main 0f3663e31ea6610eb2a00256ca0d984ebc7c586b; current ServicePlan interface reference inspected read-only via GitHub at 5c3e9dc40a083495def3623f61c60985418a5653. No reference checkout, operational database or hosting configuration changed.
-- Chose independent daily operating-summary extension and separate healthy training/development populations. Ridge with a correct observable interaction basis is the initial compact reference; all coefficients/tolerances freeze before fleet scoring. No age/country/hidden condition input enters score inference.
-- Generated coherent persistent component trajectories, weather/context, recorder/sensor gaps and independently labelled synthetic interventions. Canonical usage remains unchanged. Hidden monthly loss/interventions live only in offline evaluation artifacts.
-- Implemented exposure-weighted 70/30 mean/tail policy, five-channel sufficiency, full monthly grid, exact additive deductions, frozen target-specific peer matching and deterministic explanation templates.
-- Completed the first overview/detail vertical slice: own/peer gauges, four-month trend, component comparisons, evidence, membership and arithmetic. Initial AppTest smoke checks passed. Further validation, browser review, clean-clone and CI evidence follows in verification.md.
+FleetPulse extends the canonical FleetCare asset and usage data with a coherent daily component-performance history. Canonical source revision: `0f3663e31ea6610eb2a00256ca0d984ebc7c586b`. Persistent component trajectories, weather/context variation, sensor gaps and labelled synthetic interventions support offline evaluation.
 
-- Completed 35 tests with no skips, full offline validation and desktop native-table walkthroughs: limited, missing-data, zero-peer, small-deviation, declining and rebound/one-peer cases. Inspected 390×844 stacking through native Chrome DevTools after direct responsive control failed; restored desktop afterward. Screenshots and measured evidence are indexed in docs.
-- Clarified unit labels to avoid truncated asset counters and kept unavailable peer contributors explicitly unavailable. No scoring parameters were retuned from final evaluation results.
+A separate healthy development population fits the frozen ridge reference. Observable operating conditions explain the expected signal; age, country and hidden condition labels are excluded from score inference. Evaluation labels remain separate from application inputs.
 
-- GitHub application commit e59b7e1 passed remote CI: 35 tests in 7.81 s, locked installation, dependency consistency, lint/format and offline validation. Fresh independent Python 3.12.14 clone passed all 35 tests and real Streamlit startup health/HTTP checks, without private files or reference checkouts. Final handoff records those measured results; hosting remains a manual step with no Secrets.
+## Scoring and peers
+
+Five component scores combine exposure-weighted mean and tail severity using a 70/30 policy. Coverage thresholds determine whether an overall score is available. Exact additive contributions explain deductions, peer gaps and month-to-month changes.
+
+Peer matching uses target-specific model, usage, ambient, age and lifetime-hour criteria. The target vehicle is excluded, and comparisons require at least two other vehicles. Sparse and unavailable comparisons are explicitly labelled.
+
+## Interface
+
+The overview supports monthly review, search, filters, pagination and full filtered export. Vehicle details show own/peer gauges, a four-month trend, component comparisons, peer membership, evidence and score arithmetic. Navigation preserves review context.
+
+## Verification record
+
+The implementation review recorded 35 passing tests, offline scoring validation and desktop/phone walkthroughs. GitHub CI and an independent Python 3.12.14 clean clone passed the same 35 tests, locked installation and Streamlit startup checks. See [verification.md](verification.md) for measured outcomes and sensitivity analysis.
+
+[Scoring reference](scoring-baseline-card.md) · [Peer policy](peer-reference-policy.md) · [Reproducibility](reproducibility.md)

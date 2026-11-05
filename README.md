@@ -1,6 +1,13 @@
 # FleetPulse — Vehicle Health & Peer Analytics
 
-A read-only fleet review application by **Enamul Haque**. Select a month, inspect one of 1,000 fictional vehicles, and understand its condition index, recent trend and matched-peer comparison. Explanations trace back to five observable signal indicators and exact score contributions.
+An explainable fleet-health analytics application by **Enamul Haque**. Review a vehicle’s monthly health score, compare it with similar vehicles, and identify the component-level drivers of underperformance across a synthetic fleet of **1,000 vehicles**.
+
+**Python · Streamlit · pandas/Parquet · scikit-learn · Plotly**
+
+- Context-adjusted healthy baselines separate operating conditions from adverse sensor behaviour.
+- Transparent component contributions explain the overall score and the gap to matched peers.
+- Four-month trends connect the current result with recent performance.
+- Explicit coverage thresholds and sparse-peer handling keep unavailable comparisons visible.
 
 ![Fleet overview](docs/screenshots/overview.jpg)
 
@@ -48,9 +55,9 @@ Own deductions `0.20 × (100 − component)` sum to `100 − health`. Peer-gap c
 
 ## Data and measured checks
 
-Canonical assets/usage come read-only from [FleetCare](https://github.com/Enamul22/FleetCare-PredictiveMaintenance) revision **`0f3663e31ea6610eb2a00256ca0d984ebc7c586b`**. ServicePlan’s current table/detail interface was inspected at **`5c3e9dc40a083495def3623f61c60985418a5653`**. Source IDs/counters are preserved: **1,000 vehicles, 201 customers, four models/countries, 365,000 daily usage records, 12,000 vehicle-month rows**.
+Canonical assets/usage come read-only from [FleetCare](https://github.com/Enamul22/FleetCare-PredictiveMaintenance) revision **`0f3663e31ea6610eb2a00256ca0d984ebc7c586b`**. Source IDs/counters are preserved: **1,000 vehicles, 201 customers, four models/countries, 365,000 daily usage records, 12,000 vehicle-month rows**.
 
-Original monthly usage files do not establish a coherent year of component condition. FleetPulse therefore generates a separately identified **synthetic daily performance-history extension**, including persistent per-vehicle characteristics, independent component evolution, fictional weather variation, noise, measurement gaps and supported synthetic interventions. It does not import live work orders or claim ServicePlan completions caused recovery. Hidden labels remain separate offline evaluation artifacts and are never read by the app.
+Original monthly usage files do not establish a coherent year of component condition. FleetPulse therefore generates a separately identified **synthetic daily performance-history extension**, including persistent per-vehicle characteristics, independent component evolution, fictional weather variation, noise, measurement gaps and supported synthetic interventions. Hidden labels remain separate offline evaluation artifacts and are never read by the app.
 
 December: **907 valid own scores, 874 peer comparisons, 93 unavailable overall scores**. Of valid own scores without comparison, seven have zero eligible peers and 26 have one; 121 comparisons have limited support. These counts result from the frozen rules rather than a target distribution.
 
@@ -67,7 +74,7 @@ python -m pip install -r requirements.lock.txt
 streamlit run app.py
 ```
 
-Prepared assets are included; startup does not fit a model, generate data, read either reference app, access a database or require a secret. `requirements.txt` includes the complete lock so manual Streamlit deployment uses the tested versions.
+Prepared assets and frozen scoring references are bundled, so the app runs directly without a database or external API. `requirements.txt` includes the complete lock so manual Streamlit deployment uses the tested versions.
 
 ### Verify / reproduce offline
 
@@ -83,4 +90,4 @@ PYTHONPATH=src OPENBLAS_NUM_THREADS=1 python -m fleetpulse.prepare \
 
 Source/output SHA256s, seeds, policies and frozen coefficients are committed. Later score recalculation requires a new labelled score/reference revision, not silently replacing past values. [Reproducibility](docs/reproducibility.md).
 
-[Dataset/simulator card](docs/dataset-card.md) · [Data dictionary](docs/data-dictionary.md) · [Architecture](docs/architecture.md) · [Decisions/check log](docs/progress.md)
+[Dataset/simulator card](docs/dataset-card.md) · [Data dictionary](docs/data-dictionary.md) · [Architecture](docs/architecture.md) · [Engineering decisions](docs/progress.md)
